@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.saofenbao.jifenshangcheng.dao.VendorGiftDao" >
+
+    <sql id="vendorGiftBaseQuery">
+    	select g.id, g.name, v.jifen, v.supplyPrice
+        from gift g join vendor_gift v on g.id=v.giftId
+    </sql>
+    <select id="getGiftsByCategory" resultType="com.saofenbao.jifenshangcheng.domain.VendorGift">
+        <include refid="vendorGiftBaseQuery" />
+        where v.vendorId=#{vendorId} and v.categoryId=#{categoryId}
+    </select>
+    <select id="getAllGifts" resultType="com.saofenbao.jifenshangcheng.domain.VendorGift">
+        <include refid="vendorGiftBaseQuery" />
+        where v.vendorId=#{vendorId} 
+    </select>    
+    <select id="getVendorGift" resultType="com.saofenbao.jifenshangcheng.domain.VendorGift">
+        <include refid="vendorGiftBaseQuery" />
+        where v.vendorId=#{vendorId} and giftId=#{giftId}
+    </select>  
+    
+</mapper>

@@ -1,0 +1,14 @@
+/target
+/bin
+/files
+/build
+/src/main/webapp/WEB-INF/autostart.xml
+/src/main/webapp/WEB-INF/classes/hibernate.properties
+/src/main/webapp/WEB-INF/classes/erp.properties
+/src/main/webapp/WEB-INF/classes/hibernate.cfg.xml
+/src/main/webapp/WEB-INF/classes/liduonet.properties
+/src/main/webapp/WEB-INF/classes/log4j.properties
+/src/main/webapp/WEB-INF/classes/sms.properties
+/src/main/webapp/WEB-INF/classes/config.properties
+/src/main/webapp/WEB-INF/classes/mybatis.config.xml
+*.log
